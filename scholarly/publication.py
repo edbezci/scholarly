@@ -302,6 +302,12 @@ class Publication(object):
                 return link.get('href')
         return ''
 
+        ### getter and setter is altered
+
+    @property
+    def paper(self):
+        return self.bib
+    
     def __str__(self):
         pdict = dict(self.__dict__)
         try:
@@ -315,3 +321,5 @@ class Publication(object):
 
     def __repr__(self):
         return self.__str__()
+    
+
